@@ -1,3 +1,5 @@
+{% load static from staticfiles %}
+
 <!DOCTYPE html>
 <html lang="uk">
   
@@ -12,7 +14,7 @@
           href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
 
 
   </head>
@@ -82,7 +84,7 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td><img height="50" width="50" src="img/tweat.jpg" class="img-circle"></td>
+                <td><img height="50" width="50" src="/static/img/tweat.jpg" class="img-circle"></td>
                 <td><a title="Редагувати" href="{% url "students_edit" 1 %}">Горобець</a></td>
                 <td><a title="Редагувати" href="{% url "students_edit" 1 %}">Ігор</a></td>
                 <td>007</td>
@@ -112,7 +114,7 @@
             <tbody>
               <tr>
                 <td>2</td>
-                <td><img height="50" width="50" src="img/sem.png" class="img-circle"></td>
+                <td><img height="50" width="50" src="/static/img/sem.png" class="img-circle"></td>
                 <td><a title="Редагувати" href="#">Семенюк</a></td>
                 <td><a title="Редагувати" href="#">Ігор</a></td>
                 <td>777</td>
@@ -142,7 +144,7 @@
             <tbody>
               <tr>
                 <td>3</td>
-                <td><img height="50" width="50" src="img/kfc.jpg" class="img-circle"></td>
+                <td><img height="50" width="50" src="/static/img/kfc.jpg" class="img-circle"></td>
                 <td><a title="Редагувати" href="#">Совпадєніє?</a></td>
                 <td><a title="Редагувати" href="#">Не думаю</a></td>
                 <td>707</td>
