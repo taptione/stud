@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from stud.views import students, groups
 from .settings import MEDIA_ROOT, DEBUG
-
+from django.views.static import serve
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
@@ -20,8 +20,8 @@ urlpatterns = [
     url(r'^groups/(?P<gid>\d+)/delete/$', groups.groups_delete, name='groups_delete'),
 ]
 
+# serve files from media folder
 if DEBUG:
-    # serve files from media folder
-    urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-            'document_root': MEDIA_ROOT}))
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+    ]
