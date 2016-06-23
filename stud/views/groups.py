@@ -3,14 +3,18 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from ..models import Group
+from ..models import Group, Student
+
 
 #Views 4 groups
 def groups_list(request):
     groups = Group.objects.all()
+    students = Student.objects.all()
 
 
-    return render(request, 'students/groups_list.html', {'groups': groups})
+    return render(request, 'students/groups_list.html', {'students': students, 'groups':groups,})
+
+
 
 def groups_add(request):
     return HttpResponse('<h1>Group Add Form</h1>')

@@ -20,6 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wa=@cs3j7l19^zad#5ve9uugv*ndq5d2@iyto_p(lypsgu4*&p'
 
@@ -106,6 +107,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# email settings
+ADMIN_EMAIL = 'admin@tapti.pp.ua'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'taptione@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -130,3 +139,4 @@ PORTAL_URL = 'http://localhost:8000'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
+
